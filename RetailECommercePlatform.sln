@@ -1,6 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform", "RetailECommercePlatform\RetailECommercePlatform.csproj", "{D0FAD02A-B5D4-4A95-987D-8A92102673A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Api", "RetailECommercePlatform.Api\RetailECommercePlatform.Api.csproj", "{D0FAD02A-B5D4-4A95-987D-8A92102673A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Data", "RetailECommercePlatform.Data\RetailECommercePlatform.Data.csproj", "{75F1F4B6-A0AB-471E-9617-CCD8DF7EB1BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Repository", "RetailECommercePlatform.Repository\RetailECommercePlatform.Repository.csproj", "{366852C8-479B-4CD5-AAA1-CAD5EFC6B587}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Service", "RetailECommercePlatform.Service\RetailECommercePlatform.Service.csproj", "{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +18,17 @@ Global
 		{D0FAD02A-B5D4-4A95-987D-8A92102673A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0FAD02A-B5D4-4A95-987D-8A92102673A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0FAD02A-B5D4-4A95-987D-8A92102673A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F1F4B6-A0AB-471E-9617-CCD8DF7EB1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F1F4B6-A0AB-471E-9617-CCD8DF7EB1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F1F4B6-A0AB-471E-9617-CCD8DF7EB1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F1F4B6-A0AB-471E-9617-CCD8DF7EB1BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{366852C8-479B-4CD5-AAA1-CAD5EFC6B587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{366852C8-479B-4CD5-AAA1-CAD5EFC6B587}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{366852C8-479B-4CD5-AAA1-CAD5EFC6B587}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{366852C8-479B-4CD5-AAA1-CAD5EFC6B587}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

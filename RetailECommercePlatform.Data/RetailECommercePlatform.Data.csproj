@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="CommonModels\" />
+      <Folder Include="RequestModels\Query\Cart\" />
+      <Folder Include="RequestModels\Query\Customer\" />
+      <Folder Include="RequestModels\Query\Order\" />
+      <Folder Include="RequestModels\Query\Product\" />
+      <Folder Include="ResponseModels\Command\Cart\" />
+      <Folder Include="ResponseModels\Command\Customer\" />
+      <Folder Include="ResponseModels\Command\Order\" />
+      <Folder Include="ResponseModels\Command\Product\" />
+      <Folder Include="ResponseModels\Query\Cart\" />
+      <Folder Include="ResponseModels\Query\Customer\" />
+      <Folder Include="ResponseModels\Query\Order\" />
+      <Folder Include="ResponseModels\Query\Product\" />
+    </ItemGroup>
+
+</Project>
