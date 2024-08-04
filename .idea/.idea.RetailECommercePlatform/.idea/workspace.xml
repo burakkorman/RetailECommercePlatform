@@ -10,14 +10,145 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="869bc62e-11d6-4539-919d-5d068fefe89b" name="Changes" comment="initial commit" />
+    <list default="true" id="869bc62e-11d6-4539-919d-5d068fefe89b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ConfigurationModels/JwtSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/CurrentUserDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Enum/OrderState.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/CustomError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/RetailECommerceApiException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Helper/EnumHelper.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Helper/ExpressionBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/MappingProfile/MappingProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/LoginCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/RegisterCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Cart/AddItemCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Cart/DeleteItemCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Order/CancelOrderCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Order/CreateOrderCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/CreateProductCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/DeleteProductCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/UpdateProductCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Cart/GetCartQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Customer/GetCustomerByIdRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Order/GetOrderByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Order/GetOrdersQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Product/GetProductByIdQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Product/GetProductQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Command/Auth/LoginCommandResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Cart/GetCartQueryResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Customer/GetCustomerByIdQueryResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Order/GetOrderQueryResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Product/GetProductQueryResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Cart.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/IEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/MongoDbEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/MongoDbSettings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/CartRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/CustomerRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/GenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/IGenericRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/ICartRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/ICustomerRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/IOrderRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/IProductRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/OrderRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/ProductRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/LoginCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/RegisterCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/AddItemCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/DeleteItemCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CancelOrderCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/CreateProductCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/DeleteProductCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/UpdateProductCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/ExceptionMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Cart/GetCartQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Customer/GetCustomerByIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrderByIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductByIdQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/ITokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/TokenService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Test/CommandHandlerTests/CreateOrderCommandHandlerTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Test/QueryHandlerTests/Order/GetOrdersQueryHandlerTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RetailECommercePlatform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RetailECommercePlatform/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CartController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/OrderController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/RetailECommercePlatform.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/RetailECommercePlatform.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/AuthMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/LoggingMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/CreateCustomerCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/DeleteCustomerCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/DeleteCustomerCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/UpdateCustomerCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/UpdateCustomerCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RetailECommercePlatform.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RetailECommercePlatform.Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/BaseEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Product.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/RetailECommercePlatform.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/RetailECommercePlatform.Repository.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/RetailECommercePlatform.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/RetailECommercePlatform.Service.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "burakkorman"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/burakkorman/RetailECommercePlatform",
+    "accountId": "32fd6715-28ce-4fd2-bd1b-6a88f2bafc78"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/aa0f54b63cbe463d8e6891e0ed950065fe00/c8/b19195ff/AuthorizationAppBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7c9b3ac147e4d7191c3637dd928b58d55200/4d/3608adaf/UseMiddlewareExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f708acd6adf94c8e8e7ce42134642189186200/6c/be83aec9/MongoClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcbf4f8a5ab54375abcfa46e8f5896b536c00/70/7f3625ac/CallSiteFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fcbf4f8a5ab54375abcfa46e8f5896b536c00/e8/f34fa4dc/ServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1b555b241b69d56fb42b4bc489283287efca921d278ab43024db6091625b30/IMongoDatabase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7415982338a3ccbd2a7a4eb483af627bda727e356b86bb32c5d4f6998f9c/IRequestHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e5b9c140912e8295f69159adbf39ad664d070868f2c2ae42d7e7dd1d92a9d4/ServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -29,25 +160,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.RetailECommercePlatform.Api: http.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ead1f252-d3d1-4b41-8b34-2abbe4321e44.executor": "Debug",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/korman/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/korman/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache&quot;,
-      &quot;/Users/korman/Library/Application Support/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/korman/Library/Application Support/JetBrains/Rider2024.1/resharper-host/DecompilerCache",
+      "/Users/korman/Library/Application Support/JetBrains/Rider2024.1/resharper-host/SourcesCache",
+      "/Users/korman/Library/Application Support/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.RetailECommercePlatform.Api: http">
     <configuration name="RetailECommercePlatform.Api: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/RetailECommercePlatform.Api/RetailECommercePlatform.Api.csproj" />
@@ -89,7 +222,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721778934221</updated>
       <workItem from="1721778936678" duration="373000" />
-      <workItem from="1721779319931" duration="905000" />
+      <workItem from="1721779319931" duration="70749000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -107,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721780221305</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1721780311391</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721780311391</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +271,169 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" containingFunctionPresentation="Method 'Put'">
+            <startOffsets>
+              <option value="718" />
+            </startOffsets>
+            <endOffsets>
+              <option value="719" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Customer/GetCustomerByIdQueryHandler.cs</url>
+          <line>9</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Customer/GetCustomerByIdQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="455" />
+            </startOffsets>
+            <endOffsets>
+              <option value="456" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs</url>
+          <line>32</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs" containingFunctionPresentation="Method 'HandleExceptionAsync'">
+            <startOffsets>
+              <option value="840" />
+            </startOffsets>
+            <endOffsets>
+              <option value="841" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs" containingFunctionPresentation="Method 'HandleExceptionAsync'">
+            <startOffsets>
+              <option value="1461" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1515" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/CreateProductCommandHandler.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/CreateProductCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="712" />
+            </startOffsets>
+            <endOffsets>
+              <option value="713" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/AddItemCommandHandler.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/AddItemCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1077" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1078" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1147" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1148" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/ExceptionMiddleware.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/ExceptionMiddleware.cs" containingFunctionPresentation="Method 'HandleExceptionAsync'">
+            <startOffsets>
+              <option value="981" />
+            </startOffsets>
+            <endOffsets>
+              <option value="982" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1408" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1468" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
+            <startOffsets>
+              <option value="1110" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1111" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs" containingFunctionPresentation="Method 'ValidateCartProducts'">
+            <startOffsets>
+              <option value="1945" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1946" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs</url>
+          <line>70</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs" containingFunctionPresentation="Method 'CreateOrder'">
+            <startOffsets>
+              <option value="2683" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2684" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

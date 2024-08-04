@@ -7,19 +7,31 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="CommonModels\" />
-      <Folder Include="RequestModels\Query\Cart\" />
-      <Folder Include="RequestModels\Query\Customer\" />
-      <Folder Include="RequestModels\Query\Order\" />
-      <Folder Include="RequestModels\Query\Product\" />
       <Folder Include="ResponseModels\Command\Cart\" />
       <Folder Include="ResponseModels\Command\Customer\" />
       <Folder Include="ResponseModels\Command\Order\" />
       <Folder Include="ResponseModels\Command\Product\" />
-      <Folder Include="ResponseModels\Query\Cart\" />
-      <Folder Include="ResponseModels\Query\Customer\" />
-      <Folder Include="ResponseModels\Query\Order\" />
-      <Folder Include="ResponseModels\Query\Product\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="MediatR" Version="12.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.AspNetCore.Http.Abstractions">
+        <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+        <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RetailECommercePlatform.Repository\RetailECommercePlatform.Repository.csproj" />
     </ItemGroup>
 
 </Project>

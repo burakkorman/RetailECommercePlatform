@@ -7,14 +7,22 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="CommandHandlers\Cart\" />
       <Folder Include="CommandHandlers\Customer\" />
-      <Folder Include="CommandHandlers\Order\" />
-      <Folder Include="CommandHandlers\Product\" />
-      <Folder Include="QueryHandlers\Cart\" />
-      <Folder Include="QueryHandlers\Customer\" />
-      <Folder Include="QueryHandlers\Order\" />
-      <Folder Include="QueryHandlers\Product\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR" Version="12.4.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\RetailECommercePlatform.Data\RetailECommercePlatform.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+        <HintPath>..\..\..\..\..\..\usr\local\share\dotnet\shared\Microsoft.AspNetCore.App\8.0.7\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

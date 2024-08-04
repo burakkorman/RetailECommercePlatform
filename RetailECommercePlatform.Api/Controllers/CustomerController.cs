@@ -1,40 +1,33 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using RetailECommercePlatform.Data.RequestModels.Command.Customer;
+using RetailECommercePlatform.Data.RequestModels.Query.Customer;
 
 namespace RetailECommercePlatform.Api.Controllers;
 
+[Authorize]
+[Route("api/customer")]
+[ApiController]
 public class CustomerController(IMediator mediator) : ControllerBase
 {
-    [HttpGet()]
-    public async Task<IActionResult> GetAll()
-    {
-        var result = await mediator.Send(new object());
-        return Ok(result);
-    }
-    
     [HttpGet("getById")]
-    public async Task<IActionResult> Get(object request)
+    public async Task<IActionResult> Get([FromQuery] GetCustomerByIdRequest request)
     {
         var result = await mediator.Send(request);
         return Ok(result);
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Post(object request)
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Put(string id, [FromBody] UpdateCustomerCommand request)
     {
-        var result = await mediator.Send(request);
-        return Ok(result);
-    }
-
-    [HttpPut]
-    public async Task<IActionResult> Put(object request)
-    {
+        request.Id = id;
         var result = await mediator.Send(request);
         return Ok(result);
     }
 
     [HttpDelete]
-    public async Task<IActionResult> Delete(object request)
+    public async Task<IActionResult> Delete(DeleteCustomerCommand request)
     {
         var result = await mediator.Send(request);
         return Ok(result);

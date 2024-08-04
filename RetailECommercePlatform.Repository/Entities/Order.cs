@@ -1,7 +1,9 @@
 namespace RetailECommercePlatform.Repository.Entities;
 
-public class Order : BaseEntity
+public class Order : MongoDbEntity
 {
-    public Guid ProductId { get; set; }
-    public Guid CustomerId { get; set; }
+    public string CustomerId { get; set; }
+    public List<Cart> OrderItems { get; set; }
+    public decimal TotalPrice { get; set; }
+    public int State { get; set; }
 }

@@ -7,7 +7,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Repositories\Interfaces\" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.7" />
+      <PackageReference Include="MongoDB.Bson" Version="2.28.0" />
+      <PackageReference Include="MongoDB.Driver" Version="2.28.0" />
     </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 namespace RetailECommercePlatform.Repository.Entities;
 
-public class Product : BaseEntity
+public class Product : MongoDbEntity
 {
     public string Code { get; set; }
     public string Name { get; set; }

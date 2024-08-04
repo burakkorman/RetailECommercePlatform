@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Rep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Service", "RetailECommercePlatform.Service\RetailECommercePlatform.Service.csproj", "{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RetailECommercePlatform.Test", "RetailECommercePlatform.Test\RetailECommercePlatform.Test.csproj", "{21913503-B2E8-44FE-AC8C-2C368C2DB5CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FCF1A96-A29A-4AC2-962F-BB8E0E2EBE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21913503-B2E8-44FE-AC8C-2C368C2DB5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21913503-B2E8-44FE-AC8C-2C368C2DB5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21913503-B2E8-44FE-AC8C-2C368C2DB5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21913503-B2E8-44FE-AC8C-2C368C2DB5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
