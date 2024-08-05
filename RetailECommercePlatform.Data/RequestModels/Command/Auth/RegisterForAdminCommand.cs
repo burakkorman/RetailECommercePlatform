@@ -1,11 +1,11 @@
 using MediatR;
-using RetailECommercePlatform.Data.ResponseModels.Command.Auth;
 
 namespace RetailECommercePlatform.Data.RequestModels.Command.Auth;
 
-public class LoginCommand : IRequest<LoginCommandResponse>
+public class RegisterForAdminCommand : IRequest<bool>
 {
+    public string Name { get; set; }
+    public string Surname { get; set; }
     public string Username { get; set; }
     public string Password { get; set; }
-    public bool IsAdmin { get; set; }
 }

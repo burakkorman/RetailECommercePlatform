@@ -6,7 +6,7 @@ using RetailECommercePlatform.Data.RequestModels.Query.Cart;
 
 namespace RetailECommercePlatform.Api.Controllers;
 
-[Authorize]
+[Authorize(Roles = "Customer")]
 [Route("api/cart")]
 [ApiController]
 public class CartController(IMediator mediator) : ControllerBase

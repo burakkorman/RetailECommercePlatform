@@ -6,7 +6,7 @@ namespace RetailECommercePlatform.Service.Services.Token;
 
 public interface ITokenService
 {
-    public Task<GenerateTokenResponse> GenerateToken(GenerateTokenRequest request);
+    Task<GenerateTokenResponse> GenerateToken(GenerateTokenRequest request);
     CurrentUserDto Me();
     Task<CurrentUserDto> ValidateToken(string token);
 }

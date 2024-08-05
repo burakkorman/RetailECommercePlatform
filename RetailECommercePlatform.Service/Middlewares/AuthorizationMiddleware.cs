@@ -19,7 +19,7 @@ public class AuthorizationMiddleware
         ITokenService tokenService)
     {
         var token = context.Request.Headers["Authorization"].ToString().Replace("Bearer ","");
-        var user = tokenService.ValidateToken(token);
+        var user = await tokenService.ValidateToken(token);
         
         await _next(context);
     }

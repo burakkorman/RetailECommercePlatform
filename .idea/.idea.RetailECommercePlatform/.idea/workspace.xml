@@ -10,96 +10,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="869bc62e-11d6-4539-919d-5d068fefe89b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ConfigurationModels/JwtSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/CurrentUserDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Enum/OrderState.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/CustomError.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/RetailECommerceApiException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Helper/EnumHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Helper/ExpressionBuilder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/MappingProfile/MappingProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/LoginCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/RegisterCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Cart/AddItemCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Cart/DeleteItemCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Order/CancelOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Order/CreateOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/CreateProductCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/DeleteProductCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Product/UpdateProductCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Cart/GetCartQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Customer/GetCustomerByIdRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Order/GetOrderByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Order/GetOrdersQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Product/GetProductByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Product/GetProductQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Command/Auth/LoginCommandResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Cart/GetCartQueryResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Customer/GetCustomerByIdQueryResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Order/GetOrderQueryResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/ResponseModels/Query/Product/GetProductQueryResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Cart.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/IEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/MongoDbEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/MongoDbSettings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/CartRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/CustomerRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/GenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/IGenericRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/ICartRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/ICustomerRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/IOrderRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/IProductRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/OrderRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/ProductRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/LoginCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/RegisterCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/AddItemCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Cart/DeleteItemCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CancelOrderCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Order/CreateOrderCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/CreateProductCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/DeleteProductCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Product/UpdateProductCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/ExceptionMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Cart/GetCartQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Customer/GetCustomerByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrderByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/ITokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/TokenService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Test/CommandHandlerTests/CreateOrderCommandHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Test/QueryHandlerTests/Order/GetOrdersQueryHandlerTests.cs" afterDir="false" />
+    <list default="true" id="869bc62e-11d6-4539-919d-5d068fefe89b" name="Changes" comment="base changes">
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/RegisterForAdminCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Query/Order/GetAllOrdersQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Admin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/AdminRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Interfaces/IAdminRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/RegisterForAdminCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetAllOrdersQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Order/IOrderService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Order/OrderService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RetailECommercePlatform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RetailECommercePlatform/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CartController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CartController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/OrderController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/ProductController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/RetailECommercePlatform.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/RetailECommercePlatform.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/AuthMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/ExceptionMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Middlewares/LoggingMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/CreateCustomerCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/CurrentUserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/CurrentUserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Contract/Token/GenerateTokenRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/CustomError.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/Errors/CustomError.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/MappingProfile/MappingProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/MappingProfile/MappingProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/LoginCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Auth/LoginCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/DeleteCustomerCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/DeleteCustomerCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/UpdateCustomerCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RequestModels/Command/Customer/UpdateCustomerCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Data/RetailECommercePlatform.Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Data/RetailECommercePlatform.Data.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/BaseEntity.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Customer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Order.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Entities/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/RetailECommercePlatform.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/RetailECommercePlatform.Repository.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/RetailECommercePlatform.Service.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/RetailECommercePlatform.Service.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.sln" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/GenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/GenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/IGenericRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Repository/Repositories/Generic/IGenericRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/LoginCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/LoginCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/RegisterCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/CommandHandlers/Auth/RegisterCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/ITokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/ITokenService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/TokenService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Services/Token/TokenService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1721778934221</updated>
       <workItem from="1721778936678" duration="373000" />
-      <workItem from="1721779319931" duration="70749000" />
+      <workItem from="1721779319931" duration="78721000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -248,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721780311391</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="base changes">
+      <option name="closed" value="true" />
+      <created>1722806990350</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1722806990350</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,11 +206,145 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="55e25af6-d3c4-4938-ac84-c33d83f257b3" value="TOOL_WINDOW" />
+        <entry key="730b9386-d589-403f-b4e9-d621f34b6cd9" value="TOOL_WINDOW" />
+        <entry key="8a161440-87ee-4aae-9a3b-eb444c945fbd" value="TOOL_WINDOW" />
+        <entry key="ad90677e-ce3d-4a45-ba97-aba264d2bc5a" value="TOOL_WINDOW" />
+        <entry key="e8bd09cd-92a8-4291-b86c-38d729102874" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
+        <entry key="55e25af6-d3c4-4938-ac84-c33d83f257b3">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/korman/Documents/projects/RetailECommercePlatform/RetailECommercePlatform.Data" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="730b9386-d589-403f-b4e9-d621f34b6cd9">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/korman/Documents/projects/RetailECommercePlatform/RetailECommercePlatform.Test" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="8a161440-87ee-4aae-9a3b-eb444c945fbd">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/korman/Documents/projects/RetailECommercePlatform/RetailECommercePlatform.Api" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
+          </value>
+        </entry>
+        <entry key="ad90677e-ce3d-4a45-ba97-aba264d2bc5a">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/korman/Documents/projects/RetailECommercePlatform/RetailECommercePlatform.Repository" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="e8bd09cd-92a8-4291-b86c-38d729102874">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/korman/Documents/projects/RetailECommercePlatform/RetailECommercePlatform.Service" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
           </value>
         </entry>
       </map>
@@ -272,7 +355,8 @@
     <MESSAGE value="initial" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="base changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="base changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -282,10 +366,10 @@
           <line>22</line>
           <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Api/Controllers/CustomerController.cs" containingFunctionPresentation="Method 'Put'">
             <startOffsets>
-              <option value="718" />
+              <option value="738" />
             </startOffsets>
             <endOffsets>
-              <option value="719" />
+              <option value="739" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -382,27 +466,14 @@
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs</url>
-          <line>37</line>
-          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Product/GetProductQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
-            <startOffsets>
-              <option value="1408" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1468" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs</url>
-          <line>27</line>
+          <line>24</line>
           <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/QueryHandlers/Order/GetOrdersQueryHandler.cs" containingFunctionPresentation="Method 'Handle'">
             <startOffsets>
-              <option value="1110" />
+              <option value="904" />
             </startOffsets>
             <endOffsets>
-              <option value="1111" />
+              <option value="905" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="37" />
@@ -432,6 +503,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs</url>
+          <line>19</line>
+          <properties documentPath="$PROJECT_DIR$/RetailECommercePlatform.Service/Middlewares/AuthorizationMiddleware.cs" containingFunctionPresentation="Method 'Invoke'">
+            <startOffsets>
+              <option value="503" />
+            </startOffsets>
+            <endOffsets>
+              <option value="504" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

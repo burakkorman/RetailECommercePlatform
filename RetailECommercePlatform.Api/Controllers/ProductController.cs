@@ -1,4 +1,5 @@
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RetailECommercePlatform.Data.RequestModels.Command.Product;
 using RetailECommercePlatform.Data.RequestModels.Query.Product;
@@ -9,6 +10,7 @@ namespace RetailECommercePlatform.Api.Controllers;
 [ApiController]
 public class ProductController(IMediator mediator) : ControllerBase
 {
+    [Authorize(Roles = "Admin,Customer")]
     [HttpPost("filter")]
     public async Task<IActionResult> Get([FromBody] GetProductQuery request)
     {
@@ -16,6 +18,7 @@ public class ProductController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
     
+    [Authorize(Roles = "Admin,Customer")]
     [HttpGet("getById")]
     public async Task<IActionResult> Get([FromQuery] GetProductByIdQuery request)
     {
@@ -23,6 +26,7 @@ public class ProductController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public async Task<IActionResult> Post([FromBody] CreateProductCommand request)
     {
@@ -30,6 +34,7 @@ public class ProductController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(string id, [FromBody] UpdateProductCommand request)
     {
@@ -38,6 +43,7 @@ public class ProductController(IMediator mediator) : ControllerBase
         return Ok(result);
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpDelete]
     public async Task<IActionResult> Delete([FromQuery] DeleteProductCommand request)
     {

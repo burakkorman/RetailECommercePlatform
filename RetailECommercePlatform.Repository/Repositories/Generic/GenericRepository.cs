@@ -90,4 +90,9 @@ public abstract class GenericRepository<T> : IGenericRepository<T> where T : cla
     {
         return await Collection.FindOneAndDeleteAsync(filter);
     }
+    
+    public virtual async Task<bool> AnyAsync(Expression<Func<T, bool>> filter)
+    {
+        return await Collection.Find(filter).AnyAsync();
+    }
 }

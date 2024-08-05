@@ -6,7 +6,7 @@ using RetailECommercePlatform.Data.RequestModels.Query.Customer;
 
 namespace RetailECommercePlatform.Api.Controllers;
 
-[Authorize]
+[Authorize(Roles = "Customer")]
 [Route("api/customer")]
 [ApiController]
 public class CustomerController(IMediator mediator) : ControllerBase

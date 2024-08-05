@@ -1,6 +1,7 @@
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -18,11 +19,15 @@ public class TokenService : ITokenService
     public CurrentUserDto CurrentUser { get; private set; }
     private readonly JwtSettings _jwtSettings;
     private readonly ICustomerRepository _customerRepository;
+    private readonly IAdminRepository _adminRepository;
+    private readonly IMapper _mapper;
 
-    public TokenService(IOptions<JwtSettings> jwtSettings, ICustomerRepository customerRepository)
+    public TokenService(IOptions<JwtSettings> jwtSettings, ICustomerRepository customerRepository, IAdminRepository adminRepository, IMapper mapper)
     {
         _jwtSettings = jwtSettings.Value;
         _customerRepository = customerRepository;
+        _adminRepository = adminRepository;
+        _mapper = mapper;
     }
 
     public Task<GenerateTokenResponse> GenerateToken(GenerateTokenRequest request)
@@ -37,7 +42,8 @@ public class TokenService : ITokenService
             audience: _jwtSettings.Audience,
             claims: new List<Claim>
             {
-                new Claim("username", request.Username)
+                new Claim("username", request.Username),
+                new Claim(ClaimTypes.Role, request.Role)
             },
             notBefore: dateTimeNow,
             expires: DateTime.Now.AddMinutes(_jwtSettings.ExpiryMinutes),
@@ -65,14 +71,32 @@ public class TokenService : ITokenService
             var handler = new JwtSecurityTokenHandler();
             var jwtSecurityToken = handler.ReadJwtToken(token);
             var currentUsername = jwtSecurityToken.Claims.First(claim => claim.Type == "username").Value;
+            var currentRole = jwtSecurityToken.Claims.First(claim => claim.Type == ClaimTypes.Role).Value;
 
-            var customer = await _customerRepository.GetByUsername(currentUsername);
-            CurrentUser = new CurrentUserDto
+            if (string.IsNullOrEmpty(currentUsername) || string.IsNullOrEmpty(currentRole))
             {
-                Id = customer.Id,
-                Name = customer.Name,
-                Surname = customer.Surname
-            };
+                throw new SecurityTokenException("Invalid token claims.");
+            }
+            
+            if (currentRole == "Admin")
+            {
+                var admin = await _adminRepository.GetAsync(a => a.Username == currentUsername);
+                if (admin == null)
+                {
+                    throw new KeyNotFoundException("Admin not found.");
+                }
+                CurrentUser = _mapper.Map<CurrentUserDto>(admin);
+            }
+            else
+            {
+                var customer = await _customerRepository.GetByUsername(currentUsername);
+                if (customer == null)
+                {
+                    throw new KeyNotFoundException("Customer not found.");
+                }
+                CurrentUser = _mapper.Map<CurrentUserDto>(customer);
+            }
+            CurrentUser.Role = currentRole;
 
             return CurrentUser;
         }

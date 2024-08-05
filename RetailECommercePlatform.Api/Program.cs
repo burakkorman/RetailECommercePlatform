@@ -10,13 +10,16 @@ using RetailECommercePlatform.Repository;
 using RetailECommercePlatform.Repository.Repositories;
 using RetailECommercePlatform.Repository.Repositories.Interfaces;
 using RetailECommercePlatform.Service.Middlewares;
+using RetailECommercePlatform.Service.Services.Order;
 using RetailECommercePlatform.Service.Services.Token;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICartRepository, CartRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();

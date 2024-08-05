@@ -9,32 +9,37 @@ using RetailECommercePlatform.Service.Services.Token;
 
 namespace RetailECommercePlatform.Service.CommandHandlers.Auth;
 
-public class LoginCommandHandler(ICustomerRepository customerRepository, ITokenService tokenService) : IRequestHandler<LoginCommand, LoginCommandResponse>
+public class LoginCommandHandler(ICustomerRepository customerRepository, IAdminRepository adminRepository, ITokenService tokenService) : IRequestHandler<LoginCommand, LoginCommandResponse>
 {
     public async Task<LoginCommandResponse> Handle(LoginCommand request, CancellationToken cancellationToken)
     {
-        LoginCommandResponse response = new();
-
         if (string.IsNullOrEmpty(request.Username) || string.IsNullOrEmpty(request.Password))
         {
             throw new ArgumentNullException(nameof(request));
         }
+        
+        var role = request.IsAdmin ? "Admin" : "Customer";
 
-        var customer = customerRepository.GetAsync(x => x.Username == request.Username && x.Password == request.Password);
-
-        if (customer is null)
+        var userExist = request.IsAdmin
+            ? await adminRepository.AnyAsync(x => x.IsActive && x.Username == request.Username && x.Password == request.Password)
+            : await customerRepository.AnyAsync(x => x.IsActive && x.Username == request.Username && x.Password == request.Password);
+        
+        if (!userExist)
         {
             throw new RetailECommerceApiException(CustomError.E_100);
         }
-        else
+        
+        var generatedTokenInformation = await tokenService.GenerateToken(new GenerateTokenRequest
         {
-            var generatedTokenInformation = await tokenService.GenerateToken(new GenerateTokenRequest { Username = request.Username });
+            Username = request.Username,
+            Role = role
+        });
 
-            response.AuthenticateResult = true;
-            response.AuthToken = generatedTokenInformation.Token;
-            response.AccessTokenExpireDate = generatedTokenInformation.TokenExpireDate;  
-        }
-
-        return response;
+        return new LoginCommandResponse
+        {
+            AuthenticateResult = true,
+            AuthToken = generatedTokenInformation.Token,
+            AccessTokenExpireDate = generatedTokenInformation.TokenExpireDate
+        };
     }
 }
